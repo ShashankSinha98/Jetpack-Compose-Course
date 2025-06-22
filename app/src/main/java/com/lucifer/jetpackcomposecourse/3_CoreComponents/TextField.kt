@@ -93,6 +93,34 @@ fun TextFieldAndOutlinedTextFieldSample() {
     }
 }
 
+/**
+ * **visualTransformation**:
+ * - Used to transform the visual representation of the text in the TextField.
+ * - `PasswordVisualTransformation` masks the text (e.g., with dots) to hide sensitive information like passwords.
+ * - `VisualTransformation.None` displays the text as-is, without any transformation.
+ * */
+
+/**
+* **keyboardOptions**:
+* - Specifies the behavior and configuration of the keyboard for a `TextField`.
+* - Allows customization of keyboard type, capitalization, auto-correction, and more.
+* - Commonly used to tailor the keyboard experience based on the input type.
+
+* **KeyboardType.Password**:
+* - Indicates that the keyboard should be optimized for password input.
+* - Typically disables predictive text and auto-correction for security purposes.
+* - Displays a keyboard layout suitable for entering passwords.
+* - Ensures a secure and user-friendly input experience for sensitive data.
+*/
+
+/**
+* **trailingIcon**:
+* - A composable used to display an icon at the end of a `TextField`.
+* - Commonly used for actions like toggling password visibility or clearing text.
+* - Can be customized with any composable, such as `Icon` or `Image`.
+* - Provides an interactive element to enhance user experience.
+* - In this example, it toggles the visibility of the password by changing the icon dynamically.
+*/
 @Composable
 fun PasswordTextFieldSample() {
     var password by rememberSaveable { mutableStateOf("") }
@@ -112,9 +140,7 @@ fun PasswordTextFieldSample() {
             },
             visualTransformation = if(passwordVisible) VisualTransformation.None else PasswordVisualTransformation(), // to show and hide the password
             keyboardOptions = KeyboardOptions(
-                keyboardType = KeyboardType.Password // to show the password keyboard
-                //  Indicates that the keyboard should be optimized for password input.
-            //  This typically includes hiding predictive text and showing a keyboard layout suitable for entering passwords
+                keyboardType = KeyboardType.Password
             ),
             trailingIcon = {
                 val icon = if(passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff

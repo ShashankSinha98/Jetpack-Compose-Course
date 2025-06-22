@@ -102,12 +102,10 @@ fun PartiallySelectableText() {
  * - If no annotations are found within the specified range, an empty list is returned.
  */
 
-
 /**
  * `LocalContext.current` provides access to the current Android `Context`
  *  'LocalContext.current.applicationContext' returns the application context
  **/
-
 @Composable
 fun TextWithURL() {
 

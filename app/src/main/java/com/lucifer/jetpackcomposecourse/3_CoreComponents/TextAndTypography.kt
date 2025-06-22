@@ -45,6 +45,24 @@ fun SimpleText() {
     }
 }
 
+/**
+* **buildAnnotatedString**:
+* - A Jetpack Compose function used to create rich text with multiple styles and annotations.
+* - Allows combining different text styles within a single `Text` composable.
+* - Provides a DSL(Domain-Specific Language) for defining styled text segments using `append` and `withStyle`.
+* - Useful for creating text with highlights, gradients, or other custom formatting.
+* - Can also include annotations for advanced text processing.
+
+* Example:
+* Text(
+*     text = buildAnnotatedString {
+*         append("Normal text ")
+*         withStyle(style = SpanStyle(color = Color.Red)) {
+*             append("Styled text")
+*         }
+*     }
+* )
+*/
 @Composable
 fun ColorfulText() {
     val rainbowColors = listOf(
