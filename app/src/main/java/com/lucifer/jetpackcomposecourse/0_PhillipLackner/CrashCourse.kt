@@ -148,7 +148,7 @@ fun NameList() {
         }
 
         LazyColumn {
-            items(names) { currName ->
+            items(items = names) { currName ->
                 Text(text = currName,
                     fontSize = 40.sp,
                     modifier = Modifier.fillMaxWidth()
