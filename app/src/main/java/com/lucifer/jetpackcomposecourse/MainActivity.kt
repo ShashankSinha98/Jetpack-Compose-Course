@@ -15,6 +15,9 @@ import com.lucifer.jetpackcomposecourse.`4_LayoutComposables`.ConstraintLayoutSa
 import com.lucifer.jetpackcomposecourse.`4_LayoutComposables`.LazyColumnSample
 import com.lucifer.jetpackcomposecourse.`4_LayoutComposables`.LazyRowSample
 import com.lucifer.jetpackcomposecourse.`5_BottomSheet`.BottomSheetSample
+import com.lucifer.jetpackcomposecourse.`7_Checkbox`.CheckboxSample
+import com.lucifer.jetpackcomposecourse.`7_Checkbox`.ComplexCheckboxSample
+import com.lucifer.jetpackcomposecourse.`7_Checkbox`.TriStateCheckboxSample
 import com.lucifer.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +26,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                BottomSheetSample()
+                ComplexCheckboxSample()
             }
         }
     }
@@ -31,6 +34,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        BottomSheetSample()
+        ComplexCheckboxSample()
     }
 }

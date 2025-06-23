@@ -40,10 +40,10 @@ fun BottomSheetSample() {
         mutableStateOf(false)
     }
 
-    // This state object is used to manage the bottom sheet's state.
-    var sheetState = rememberModalBottomSheetState( // initializes the state object that controls the bottom sheet's behavior (expanded, collapsed, hidden).
-        skipPartiallyExpanded = false // means the bottom sheet can enter a partially expanded state (if supported).
-    )
+    // This state object is used to manage the bottom sheet's state. (currently, it allows bottom sheet to be partially expanded, its by def behaviour)
+    /*var sheetState = rememberModalBottomSheetState(
+        skipPartiallyExpanded = false
+    )*/
 
     Box(modifier = Modifier.fillMaxSize()) {
         Box(
@@ -61,7 +61,7 @@ fun BottomSheetSample() {
             if(showBottomSheet) {
                 ModalBottomSheet(
                     modifier = Modifier.fillMaxHeight(),
-                    sheetState = sheetState,
+                    //sheetState = sheetState,
                     onDismissRequest = {
                         showBottomSheet = false // Dismiss the bottom sheet when the user taps outside or presses back
                     }

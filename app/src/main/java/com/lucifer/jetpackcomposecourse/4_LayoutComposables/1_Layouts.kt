@@ -166,5 +166,5 @@ fun ConstraintLayoutSample() {
 @Preview(showSystemUi = true)
 @Composable
 fun LayoutComposablePreview() {
-    ConstraintLayoutSample()
+    RowSample()
 }
