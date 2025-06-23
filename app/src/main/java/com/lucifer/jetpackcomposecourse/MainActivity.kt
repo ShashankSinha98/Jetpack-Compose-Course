@@ -14,6 +14,7 @@ import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.TextWithURL
 import com.lucifer.jetpackcomposecourse.`4_LayoutComposables`.ConstraintLayoutSample
 import com.lucifer.jetpackcomposecourse.`4_LayoutComposables`.LazyColumnSample
 import com.lucifer.jetpackcomposecourse.`4_LayoutComposables`.LazyRowSample
+import com.lucifer.jetpackcomposecourse.`5_BottomSheet`.BottomSheetSample
 import com.lucifer.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                LazyRowSample()
+                BottomSheetSample()
             }
         }
     }
@@ -30,6 +31,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        LazyRowSample()
+        BottomSheetSample()
     }
 }
