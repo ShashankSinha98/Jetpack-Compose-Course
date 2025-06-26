@@ -81,7 +81,7 @@ fun ComplexCheckboxSample() {
     }
 
     val childCheckboxState = remember {
-        mutableStateListOf(false, false)
+        mutableStateListOf(false, false, false)
     }
 
 
@@ -112,44 +112,26 @@ fun ComplexCheckboxSample() {
             )
         }
 
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text("Option 1")
-            Checkbox(
-                checked = childCheckboxState[0],
-                onCheckedChange = { isChecked ->
-                    childCheckboxState[0] = isChecked
+        childCheckboxState.forEachIndexed { index, isChecked ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text("Option ${index+1}")
+                Checkbox(
+                    checked = childCheckboxState[index],
+                    onCheckedChange = { isChecked ->
+                        childCheckboxState[index] = isChecked
 
-                    if( childCheckboxState.all { it } ) { // If all child checkboxes are checked
-                        parCheckboxState = ToggleableState.On
-                    } else if (childCheckboxState.any { it }) { // If any child checkbox is checked
-                        parCheckboxState = ToggleableState.Indeterminate
-                    } else { // If no child checkboxes are checked
-                        parCheckboxState = ToggleableState.Off
+                        parCheckboxState = if( childCheckboxState.all { it } ) { // If all child checkboxes are checked
+                            ToggleableState.On
+                        } else if (childCheckboxState.any { it }) { // If any child checkbox is checked
+                            ToggleableState.Indeterminate
+                        } else { // If no child checkboxes are checked
+                            ToggleableState.Off
+                        }
                     }
-                }
-            )
-        }
-
-        Row(
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text("Option 2")
-            Checkbox(
-                checked = childCheckboxState[1],
-                onCheckedChange = { isChecked ->
-                    childCheckboxState[1] = isChecked
-
-                    if( childCheckboxState.all { it } ) { // If all child checkboxes are checked
-                        parCheckboxState = ToggleableState.On
-                    } else if (childCheckboxState.any { it }) { // If any child checkbox is checked
-                        parCheckboxState = ToggleableState.Indeterminate
-                    } else { // If no child checkboxes are checked
-                        parCheckboxState = ToggleableState.Off
-                    }
-                }
-            )
+                )
+            }
         }
     }
 

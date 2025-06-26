@@ -18,6 +18,10 @@ import com.lucifer.jetpackcomposecourse.`5_BottomSheet`.BottomSheetSample
 import com.lucifer.jetpackcomposecourse.`7_Checkbox`.CheckboxSample
 import com.lucifer.jetpackcomposecourse.`7_Checkbox`.ComplexCheckboxSample
 import com.lucifer.jetpackcomposecourse.`7_Checkbox`.TriStateCheckboxSample
+import com.lucifer.jetpackcomposecourse.`8_Chips`.InputChipSample
+import com.lucifer.jetpackcomposecourse.`9_DialogBox`.AlertDialogSample
+import com.lucifer.jetpackcomposecourse.`9_DialogBox`.DialogSample
+import com.lucifer.jetpackcomposecourse.`9_DialogBox`.DialogWithImageSample
 import com.lucifer.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +30,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                ComplexCheckboxSample()
+                AlertDialogSample()
             }
         }
     }
@@ -34,6 +38,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        ComplexCheckboxSample()
+        AlertDialogSample()
     }
 }
