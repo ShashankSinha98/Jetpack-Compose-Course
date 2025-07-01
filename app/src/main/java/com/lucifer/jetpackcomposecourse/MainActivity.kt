@@ -6,6 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.lucifer.jetpackcomposecourse.`10_FloatingButton`.ExtendedFloatingActionButtonSample
+import com.lucifer.jetpackcomposecourse.`10_FloatingButton`.SimpleFloatingActionButton
+import com.lucifer.jetpackcomposecourse.`11_Menus`.DropDownMenuSample
+import com.lucifer.jetpackcomposecourse.`12_Scaffold`.ScaffoldSample
 import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.FilledButtonSample
 import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.PartiallySelectableText
 import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.PasswordTextFieldSample
@@ -30,7 +34,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                AlertDialogSample()
+                ScaffoldSample()
             }
         }
     }
@@ -38,6 +42,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        AlertDialogSample()
+        ScaffoldSample()
     }
 }
