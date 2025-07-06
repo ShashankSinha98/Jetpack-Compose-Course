@@ -10,6 +10,7 @@ import com.lucifer.jetpackcomposecourse.`10_FloatingButton`.ExtendedFloatingActi
 import com.lucifer.jetpackcomposecourse.`10_FloatingButton`.SimpleFloatingActionButton
 import com.lucifer.jetpackcomposecourse.`11_Menus`.DropDownMenuSample
 import com.lucifer.jetpackcomposecourse.`12_Scaffold`.ScaffoldSample
+import com.lucifer.jetpackcomposecourse.`13_NavigationDrawer`.DetailedDrawerSample
 import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.FilledButtonSample
 import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.PartiallySelectableText
 import com.lucifer.jetpackcomposecourse.`3_CoreComponents`.PasswordTextFieldSample
@@ -34,7 +35,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                ScaffoldSample()
+                DetailedDrawerSample()
             }
         }
     }
@@ -42,6 +43,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        ScaffoldSample()
+        DetailedDrawerSample()
     }
 }
