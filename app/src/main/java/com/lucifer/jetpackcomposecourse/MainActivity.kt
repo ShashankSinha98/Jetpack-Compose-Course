@@ -6,12 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.lucifer.jetpackcomposecourse.`14_ProgressIndicator`.CircularProgressSample
-import com.lucifer.jetpackcomposecourse.`14_ProgressIndicator`.DeterminateProgressSample
-import com.lucifer.jetpackcomposecourse.`14_ProgressIndicator`.LinearProgressSample
-import com.lucifer.jetpackcomposecourse.`15_PullToRefresh`.PullToRefreshSample
 import com.lucifer.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
-import com.lucifer.jetpackcomposecourse.ui.theme.SearchScreenSample
+import com.lucifer.jetpackcomposecourse.`16_SearchBar`.SearchScreenSample
+import com.lucifer.jetpackcomposecourse.`17_SegmentedButton`.SegmentedButtonSample
+import com.lucifer.jetpackcomposecourse.`18_Slider`.SliderSample
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +17,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                SearchScreenSample()
+                SliderSample()
             }
         }
     }
@@ -27,6 +25,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        SearchScreenSample()
+        SliderSample()
     }
 }

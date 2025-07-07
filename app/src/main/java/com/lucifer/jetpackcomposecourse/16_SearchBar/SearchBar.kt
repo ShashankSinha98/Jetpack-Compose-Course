@@ -1,4 +1,4 @@
-package com.lucifer.jetpackcomposecourse.ui.theme
+package com.lucifer.jetpackcomposecourse.`16_SearchBar`
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
