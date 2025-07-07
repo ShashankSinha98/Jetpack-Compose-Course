@@ -9,7 +9,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.lucifer.jetpackcomposecourse.`14_ProgressIndicator`.CircularProgressSample
 import com.lucifer.jetpackcomposecourse.`14_ProgressIndicator`.DeterminateProgressSample
 import com.lucifer.jetpackcomposecourse.`14_ProgressIndicator`.LinearProgressSample
+import com.lucifer.jetpackcomposecourse.`15_PullToRefresh`.PullToRefreshSample
 import com.lucifer.jetpackcomposecourse.ui.theme.JetpackComposeCourseTheme
+import com.lucifer.jetpackcomposecourse.ui.theme.SearchScreenSample
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                DeterminateProgressSample()
+                SearchScreenSample()
             }
         }
     }
@@ -25,6 +27,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        DeterminateProgressSample()
+        SearchScreenSample()
     }
 }
