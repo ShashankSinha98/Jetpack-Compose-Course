@@ -13,6 +13,8 @@ import com.lucifer.jetpackcomposecourse.`18_Slider`.SliderSample
 import com.lucifer.jetpackcomposecourse.`19_SnackBar`.SnackBarSample
 import com.lucifer.jetpackcomposecourse.`20_Badges`.BadgeSample
 import com.lucifer.jetpackcomposecourse.`21_Switch`.SwitchSample
+import com.lucifer.jetpackcomposecourse.`22_DatePicker`.DatePickerSample
+import com.lucifer.jetpackcomposecourse.`23_TimePicker`.TimePickerSample
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                SwitchSample()
+                TimePickerSample()
             }
         }
     }
@@ -28,6 +30,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        SwitchSample()
+        TimePickerSample()
     }
 }
