@@ -11,6 +11,8 @@ import com.lucifer.jetpackcomposecourse.`16_SearchBar`.SearchScreenSample
 import com.lucifer.jetpackcomposecourse.`17_SegmentedButton`.SegmentedButtonSample
 import com.lucifer.jetpackcomposecourse.`18_Slider`.SliderSample
 import com.lucifer.jetpackcomposecourse.`19_SnackBar`.SnackBarSample
+import com.lucifer.jetpackcomposecourse.`20_Badges`.BadgeSample
+import com.lucifer.jetpackcomposecourse.`21_Switch`.SwitchSample
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +20,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeCourseTheme {
-                SnackBarSample()
+                SwitchSample()
             }
         }
     }
@@ -26,6 +28,6 @@ class MainActivity : ComponentActivity() {
     @Preview(showSystemUi = true)
     @Composable
     private fun Preview() {
-        SnackBarSample()
+        SwitchSample()
     }
 }
